@@ -1,13 +1,25 @@
 // ./context.jsx
-import React, { createContext } from "react";
+import { React, useState, createContext,useEffect } from "react";
+import { GetApi } from "../utils/GetApi";
 
-export const UserContext = createContext(null);
 
-export default function UserContextProvider({children}) {
+export const CoffeeContext = createContext();
+
+const CoffeeContextProvider = ({children}) => {
+
+	const [products, setProducts] = useState([]);
+
+	const apiCoffee = `https://cafe-de-altura.vercel.app/api/products`;
+
+	useEffect(() => {
+        GetApi(apiCoffee).then(coffee => setProducts(coffee))
+    }, []);
 
 	return(
-		<UserContext.Provider>
-			{children}
-		</UserContext.Provider>
+		<CoffeeContext.Provider value={{ products, setProducts }}>
+            {children}
+        </CoffeeContext.Provider>
 	)
 }
+
+export default CoffeeContextProvider

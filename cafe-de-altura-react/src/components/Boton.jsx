@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Boton = () => {
+const Boton = ({style,text,img}) => {
   return (
-    <div>Boton</div>
+    <div  className={style} ><img src={img}/>{text}</div>
   )
 }
+
+export default Boton
