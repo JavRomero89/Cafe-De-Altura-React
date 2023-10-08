@@ -1,6 +1,7 @@
 import React from "react";
 import Cafe_mano from "../assets/Cafe_mano.png"
 import Boton from "../components/Boton"
+import { Link } from "react-router-dom";
 
 
 const Wrapper = () => {
@@ -21,7 +22,7 @@ const Wrapper = () => {
         <div className="flex items-start gap-[1em]">
 
        <Boton style={"flex justify-center items-center  rounded bg-[#1F1815] text-[0.9em] not-italic font-semibold  text-white w-[10.5em] h-[2.5em] cursor-pointer"} text={'Descubrir Origenes'}></Boton>     
-       <button className="flex justify-center items-center w-[8.5em] h-[2.5em] rounded bg-[#2A5B45] text-[0.9em] not-italic font-semibold  text-white">Comprar café</button>
+       <Link to={'/Tienda'}><button className="flex justify-center items-center w-[8.5em] h-[2.5em] rounded bg-[#2A5B45] text-[0.9em] not-italic font-semibold  text-white">Comprar café</button></Link>
         </div>
       </section>
       <section>

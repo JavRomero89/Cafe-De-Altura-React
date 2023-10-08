@@ -31,17 +31,17 @@ const SectionForm = () => {
                             <div className='flex flex-col gap-6'>
                                 <div className='flex flex-col gap-1'>
                                     <label>Nombre completo</label>
-                                    <input className='inputForm border-2 rounded-md'></input>
+                                    <input className='border-2 border-solid outline-green-900 rounded-md'></input>
                                 </div>
                                 <div className='flex flex-col gap-1'>
                                     <label>Email</label>
-                                    <input className='inputForm border-2 rounded-md'></input>
+                                    <input className='border-2 border-solid outline-green-900 rounded-md'></input>
                                 </div>
                                 <div className='flex flex-col gap-1'>
                                     <label>Teléfono</label>
-                                    <input className='inputForm border-2 rounded-md' placeholder='+1 (555) 987-6543'></input>
+                                    <input className='border-2 border-solid outline-green-900 rounded-md' placeholder='+1 (555) 987-6543'></input>
                                 </div>
-                                <textarea className='textareaForm border-2 rounded-md' cols='30' rows='6' placeholder='¿En qué podemos ayudarte?'></textarea>
+                                <textarea className='border-2 border-solid outline-green-900 rounded-md ' cols='30' rows='6' placeholder='¿En qué podemos ayudarte?'></textarea>
                                 <div className='flex gap-3'>
                                     <input className='accent-[#2A5B45] w-auto' type='checkbox'></input>
                                     <label>Acepto la <Link className='underline cursor-pointer font-semibold' to={'/Privacidad'}>Política de Privacidad</Link> y los <Link className='underline cursor-pointer font-semibold' to={'/Terminos'}>Términos y condiciones</Link>.</label>

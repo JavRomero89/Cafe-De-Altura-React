@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
                 <div className='w-[50%] flex flex-row gap-[120px]'>
                     <div>
-                    <LinksNavBar style={'flex-col gap-4'}/>
+                    <LinksNavBar style={'flex flex-col gap-4'}/>
                     </div>
                     <div className='flex flex-col gap-4'>
                        <Link to={'/Privacidad'} ><p className=' font-medium text-sm cursor-pointer'>Política de privacidad</p></Link> 

@@ -1,6 +1,7 @@
 import {React, useState,useEffect} from 'react'
 import ProductCard from './ProductCard';
 import Flechita_Negra from '../assets/Flechita_Negra.png'
+import { Link } from 'react-router-dom';
 
 export const getCoffee = async (url) => {
     const res = await fetch(url);
@@ -33,9 +34,8 @@ const ProductList = () => {
       );
     })}
   </div>
-  <section className="flex items-center gap-[1em] cursor-pointer">
-    <p className="text-[0.9em] not-italic font-semibold underline ">Ver todos</p>
-    <img src={Flechita_Negra} className="w-[1.5em] h-[0.6em]" />
+  <section className="flex items-center gap-[1em] cursor-pointer ">
+  <Link to={'/Tienda'}> <p className=" flex-row w-13 text-[0.9em] not-italic font-semibold underline  " >Ver todos <img src={Flechita_Negra} className="w-[1.5em] h-[0.6em]" /></p></Link>
   </section>
 </div>
   )
