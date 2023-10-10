@@ -6,9 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
-    // fontFamily: {
-    //   'sans': ['"Outfit"', ...defaultTheme.fontFamily.sans],
-    // },
+    fontFamily: {
+      sans: ['Outfit', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    }
   },
   plugins: [],
 }
