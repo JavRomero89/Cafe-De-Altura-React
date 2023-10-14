@@ -5,6 +5,7 @@ import Home from './page/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Tienda from './page/Tienda';
 import CopyRigth from './components/CopyRigth';
+import Checkout from './page/Checkout';
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/Tienda" element={<Tienda/>} />
+        <Route path="/Checkout" element={<Checkout/>} />
     </Routes>
 
 
