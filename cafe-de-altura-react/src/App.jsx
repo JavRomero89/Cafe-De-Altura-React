@@ -6,13 +6,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Tienda from './page/Tienda';
 import CopyRigth from './components/CopyRigth';
 import Checkout from './page/Checkout';
+import { CartProvider } from './context/CartContext';
+
 
 
 
 function App() {
   
   return (
-   
+    <CartProvider>
     <BrowserRouter>
     <NavBar />
     <Routes>
@@ -26,7 +28,7 @@ function App() {
     <CopyRigth/>
     </BrowserRouter>
     
-    
+    </CartProvider>
   )
 }
 

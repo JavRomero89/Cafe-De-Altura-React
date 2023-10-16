@@ -30,12 +30,14 @@ const ProductList = () => {
           img={cafe.img_url}
           name={cafe.brand}
           price={cafe.price}
+          available={cafe.available}
+          product={cafe}
         />
       );
     })}
   </div>
   <section className="flex items-center gap-[1em] cursor-pointer ">
-  <Link to={'/Tienda'}> <p className=" flex-row w-13 text-[0.9em] not-italic font-semibold underline  " >Ver todos <img src={Flechita_Negra} className="w-[1.5em] h-[0.6em]" /></p></Link>
+  <Link to={'/Tienda'} > <p className="flex text-[0.9em] not-italic font-semibold underline items-center " >Ver todos <img src={Flechita_Negra} className=" flex flex-row w-[1.5em] h-[0.6em]" /></p></Link>
   </section>
 </div>
   )

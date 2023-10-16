@@ -6,7 +6,7 @@ import FeatureSection from '../components/FeatureSection'
 import Faqs from '../components/Faqs'
 import ProductList from '../components/ProductList'
 import SectionForm from '../components/SectionForm'
-import DeliveryAddress from '../components/DeliveryAddress'
+
 
 
 
@@ -19,11 +19,8 @@ const Home = () => {
         <ProductList/>
         <Faqs/>
         <FeatureSection/>
-        <DeliveryAddress/>
         <SectionForm/>
-        <Footer/>
-        
-        
+        <Footer/>      
     </div>
   )
 }
