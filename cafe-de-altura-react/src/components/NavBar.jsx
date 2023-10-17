@@ -7,7 +7,7 @@ import LinksNavBar from './LinksNavBar'
 import { CartContext } from '../context/CartContext'
 
 const NavBar = () => {
-    const { cart, incrementProduct, decrementProduct,clearCart } = useContext(CartContext);
+    const { cart, incrementProduct, decrementProduct, clearCart } = useContext(CartContext);
     const [showCartModal, setShowCartModal] = useState(false);
 
 
@@ -31,8 +31,8 @@ const NavBar = () => {
                 )}
             </div>
 
-
             {showCartModal && (
+                
                 <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
                     <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50" onClick={() => setShowCartModal(false)}></div>
                     <div className="bg-white p-8 rounded-lg shadow-lg relative z-10">

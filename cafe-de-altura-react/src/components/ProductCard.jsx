@@ -1,7 +1,7 @@
 import {React,useContext} from 'react'
 import { CartContext } from '../context/CartContext';
 
-function ProductCard({ img, name, price, available, product,quantity }) {
+function ProductCard({ img, name, price, available, product,quantity}) {
   const { addToCart } = useContext(CartContext);
   return (
     <div>
@@ -11,7 +11,8 @@ function ProductCard({ img, name, price, available, product,quantity }) {
         <p className='text-[0.9em] font-normal'>{price},00 €</p>
         {available 
           ? <button 
-              onClick={() => addToCart({ img, name, price, available })} 
+          onClick={() => addToCart(product)}
+ 
               className='bg-[#6a8d7d] p-[0.5em] flex gap-[0.5em] rounded-[4px] items-start font-semibold text-white leading-4 group-hover/card:bg-[#2A5B45]'>
                 Añadir
             </button>

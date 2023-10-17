@@ -14,9 +14,9 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (product) => {
-    console.log(product);
+
     setCart(prevCart => {
-        const existingProductIndex = prevCart.findIndex(p => p._id === product._id);
+      const existingProductIndex = prevCart.findIndex(p => p._id === product._id);
 
         if (existingProductIndex >= 0) {
             const updatedCart = [...prevCart];
@@ -37,10 +37,11 @@ const incrementProduct = (productId) => {
       const newCart = [...prevCart];
       const productIndex = newCart.findIndex(p => p._id === productId);
       if (productIndex > -1) {
-          newCart[productIndex].quantity += 1;
+          newCart[productIndex].quantity = (newCart[productIndex].quantity ?? 0) + 1;
       }
       localStorage.setItem('cart', JSON.stringify(newCart));
       return newCart;
+      
   });
 };
 
@@ -48,7 +49,7 @@ const decrementProduct = (productId) => {
   setCart(prevCart => {
       const newCart = [...prevCart];
       const productIndex = newCart.findIndex(p => p._id === productId);
-      if (productIndex > -1 && newCart[productIndex].quantity > 1) {
+      if (productIndex > -1 && (newCart[productIndex].quantity ?? 1) > 1) {
           newCart[productIndex].quantity -= 1;
       } else if (productIndex > -1 && newCart[productIndex].quantity === 1) {
           newCart.splice(productIndex, 1); // Elimina el producto si la cantidad es 1
@@ -57,6 +58,7 @@ const decrementProduct = (productId) => {
       return newCart;
   });
 };
+
 
 const clearCart = () => {
   setCart([]);
